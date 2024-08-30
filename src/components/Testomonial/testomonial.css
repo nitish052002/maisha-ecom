@@ -1,0 +1,21 @@
+.user_image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+}
+
+.testomonial_rating span {
+  color: var(--teritory);
+}
+
+
+@media screen and (max-width :550px) {
+  .testomonial_card   {
+    min-width: 300px;
+  }
+  
+}
+ 

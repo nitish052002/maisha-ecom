@@ -1,0 +1,175 @@
+.search_btn:hover {
+  filter: brightness(80%);
+}
+
+.login_and_cart button:hover {
+  color: var(--primary);
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.mobo_search,
+.menu {
+  display: none;
+}
+
+/*  ================     SIDE BAR CSS         ================================ */
+
+.black_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.side_bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+
+  width: 70vw;
+  height: 100%;
+  overflow: hidden;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1001;
+  box-shadow: var(--hover-shadow);
+}
+
+.user_profile {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+}
+
+.login_top {
+  background: var(--primary);
+}
+
+#login_btn {
+  color: var(--primary);
+}
+
+.black_bg.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.side_bar.active {
+  transform: translateX(0%);
+}
+
+.nav-item:hover {
+  background: red;
+  color: white;
+}
+
+.side_bar.close {
+  transform: translateX(-100%);
+}
+
+.side_bar .cross_btn {
+  width: 30px;
+  height: 30px;
+}
+
+.side_bar .logo {
+  width: 160px;
+}
+
+.side_bar nav ul {
+  padding: 0;
+}
+.cross_btn {
+  cursor: pointer;
+}
+
+.profile_dropdown {
+  box-shadow: var(--hover-shadow);
+}
+
+.account_dropdown_container {
+  position: relative;
+}
+
+.cart_tooltip {
+  position: absolute;
+  top: -10px;
+ left: 15px;
+  width: 20px;
+  height: 20px;
+  background: red;
+  display: grid;
+  color: white;
+  border-radius: 50%;
+  padding: 0.40rem;
+  font-size: 0.60rem;
+  place-content: center;
+}
+
+#account_btn ~ .dropdown {
+  opacity: 0;
+  display: none;
+  transition: all 0.2s ease-in-out;
+  transform: translateY(-6px);
+}
+
+#account_btn:hover ~ .dropdown {
+  display: block;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+@media screen and (max-width: 990px) {
+  .payment_grid_container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #mobo_header {
+    display: flex !important;
+  }
+
+  #desk_header {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .login_and_cart .btn_lbl {
+    display: none;
+  }
+
+  .header_wrapper {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .search_input,
+  .navigation {
+    display: none;
+  }
+
+  .menu,
+  .mobo_search {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .side_bar {
+    width: 400px;
+  }
+}

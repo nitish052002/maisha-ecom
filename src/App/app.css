@@ -1,0 +1,37 @@
+.why_choose_us {
+    background: var(--secondary);
+}
+
+.why_card {
+    width: 300px;
+    height: 300px;
+}
+
+.why_card .img {
+    width: 70px;
+    height: 70px;
+    background: white;
+    padding: 0.50rem;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    
+}
+
+.custom-swiper-controls button{
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-content: center;
+    box-shadow: var(--border-shadow);
+    border-radius: 50%;
+
+}
+
+.swiper-pagination {
+    display: none;
+}
+
+.cart_icon {
+    width: 100px;
+}
